@@ -3,6 +3,8 @@
 
 A zhuyin keyboard for [Onboard](https://launchpad.net/onboard), the virtual on screen keyboard for linux.
 
+![The Onboard on-screen keyboard showing this zhuyin layout](https://user-images.githubusercontent.com/6129479/211397656-52638888-f862-424c-9d12-a44c014892da.png)
+
 I have found Onboard to be the best onscreen keyboard for use in combination with [i3wm](https://i3wm.org/), and needed access to the [Zhuyin Fuhao](https://simple.wikipedia.org/wiki/Zhuyin) to assist with learning Taiwanese Mandarin & Traditional Chinese characters.
 
 I have not created number or punctuation layers, but would welcome that contribution.
