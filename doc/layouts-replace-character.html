@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Replace character of key</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="Onboard Help">Onboard Help</a> › <a class="trail" href="index.html#advanced" title="Advanced Configuration">Advanced Configuration</a> » <a class="trail" href="layouts-index.html" title="Layout creation and customisation">Layout creation and customisation</a> › <a class="trail" href="layouts-index.html#topics" title="Topics">Topics</a> » </div></div></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">Replace character of key</span></h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="p">The following explains how to replace the character typed by a key of a layout shipping with <span class="app">Onboard</span>.</p>
+<div class="steps"><div class="inner"><div class="region"><ol class="steps">
+<li class="steps"><p class="p">Start by creating a copy of the layout that you want to modify. You can do it for example by following the <span class="link"><a href="layouts-create-copy.html" title="Copy current layout">Copy current layout</a></span> instructions.</p></li>
+<li class="steps"><p class="p">Open the <span class="file">svg files</span> that were created by copying the layout with the <span class="app">Inkscape</span> application.</p></li>
+<li class="steps"><p class="p">Locate the key you want to edit on the images opened in <span class="app">Inkscape</span>.</p></li>
+<li class="steps"><p class="p">Click on the key and open the <span class="gui">Properties</span> pane of the object in <span class="app">Inkscape</span> to get the <span class="em">id</span> of the key.</p></li>
+<li class="steps"><p class="p">Open the <span class="file">.onboard</span> file, that was created when you copied the layout in the first step of these instructions in a <span class="app">text editor</span>. It is located alongside the <span class="file">svg files</span> that you opened to get the key <span class="em">id</span>.</p></li>
+<li class="steps"><p class="p">Locate the <span class="em">&lt;key ... /&gt;</span> containing the <span class="em">id</span> you determined by using the svg files.</p></li>
+<li class="steps">
+<p class="p">Keep the <span class="em">id</span> attribute of the key and edit the <span class="em">group</span>, <span class="em">char</span>, <span class="em">label</span> and <span class="em">tooltips</span> attribute according to your needs. Here is for example the definition of a key typing the smiling face emoticon:</p>
+<div class="code"><pre class="contents"><code>&lt;key group="symbol" id="EM01" char="☺" label="☺" tooltip="Smiling face" /&gt;</code></pre></div>
+</li>
+</ol></div></div></div>
+<p class="p">Meaning of the attributes:</p>
+<div class="terms"><div class="inner"><div class="region"><dl class="terms">
+<dt class="terms">group</dt>
+<dd class="terms"><p class="p">This <span class="em">group</span> attribute is related to the themes. The colour <span class="app">Onboard</span> uses to display the key for example depends on the group, it belongs to.</p></dd>
+<dt class="terms">id</dt>
+<dd class="terms"><p class="p">The <span class="em">id</span> attribute relates the definition of the key in the .onboard file to the key in the corresponding svg file.</p></dd>
+<dt class="terms">char</dt>
+<dd class="terms"><p class="p">The <span class="em">char</span> attribute defines what gets typed by clicking on the key.</p></dd>
+<dt class="terms">label</dt>
+<dd class="terms"><p class="p">The <span class="em">label</span> attribute defines what <span class="app">Onboard</span> shows on the on-screen keyboard for the key.</p></dd>
+<dt class="terms">tooltip</dt>
+<dd class="terms"><p class="p">The <span class="em">tooltip</span> attribute defines the text of the tooltip shown when the pointer hovers over the key.</p></dd>
+</dl></div></div></div>
+<div class="note" title="Note">
+<svg height="24" width="24" version="1.1">
+ <g>
+  <path class="yelp-svg-fill" d="m4 3h16c0.554 0 1 0.446 1 1v11h-6v6h-11c-0.554 0-1-0.446-1-1v-16c0-0.554 0.446-1 1-1z"></path>
+  <path class="yelp-svg-fill" d="m17 16h4l-5 5v-4c0-0.554 0.446-1 1-1z"></path>
+ </g>
+</svg><div class="inner"><div class="region"><div class="contents"><p class="p">By using the <span class="em">char</span> attribute in the key tag the character typed by the key is fixed. Instead of using the <span class="em">char</span> attribute, you can also use the <span class="em">keysym</span> attribute. It behaves like the <span class="em">char</span> attribute, but expects the numerical value of the char in decimal or hexadecimal format.</p></div></div></div>
+</div>
+<div class="note note-important" title="Important">
+<svg height="24" width="24" version="1.1">
+ <path class="yelp-svg-fill" d="m12.5 2a9.5 9.5 0 0 0 -9.5 9.5 9.5 9.5 0 0 0 9.5 9.5 9.5 9.5 0 0 0 9.5 -9.5 9.5 9.5 0 0 0 -9.5 -9.5zm0 3a1.5 1.5 0 0 1 1.5 1.5v6a1.5 1.5 0 0 1 -1.5 1.5 1.5 1.5 0 0 1 -1.5 -1.5v-6a1.5 1.5 0 0 1 1.5 -1.5zm0 10.5a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1 -1.5 1.5 1.5 1.5 0 0 1 -1.5 -1.5 1.5 1.5 0 0 1 1.5 -1.5z"></path>
+</svg><div class="inner"><div class="region"><div class="contents">
+<p class="p">Finally, there is a third attribute to define what the key types. By replacing the <span class="em">char</span> or <span class="em">keysym</span> attribute with the <span class="em">keycode</span> attribute which receives a numerical value in decimal format, the character typed is not fix anymore. In fact, the <span class="em">keycode</span> identifies a keyboard key of the system and what gets typed depends on the keyboard language configured for the desktop session.</p>
+<p class="p">You might have a look at the <span class="file">key_defs.xml</span> file shipping with <span class="app">Onboard</span> for more information.</p>
+</div></div></div>
+</div>
+</div>
+<section class="links" role="navigation"><div class="inner">
+<div class="hgroup pagewide"></div>
+<div class="contents pagewide">
+<div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="layouts-index.html#topics" title="Topics">Topics</a></li></ul></div>
+</div></div>
+<div class="links seealsolinks"><div class="inner">
+<div class="title"><h2><span class="title">See Also</span></h2></div>
+<div class="region"><ul>
+<li class="links ">
+<a href="layouts-create-copy.html" title="Copy current layout">Copy current layout</a><span class="desc"> — Create a copy of the current layout.</span>
+</li>
+<li class="links ">
+<a href="layouts-specification.html" title="Supported tags and attributes">Supported tags and attributes</a><span class="desc"> — Tags and attributes supported by the .onboard layout xml file.</span>
+</li>
+</ul></div>
+</div></div>
+</div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"><footer class="about ui-expander" role="contentinfo"><div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li>Francesco Fumanti</li></ul>
+</div>
+<div class="credits-blank"></div>
+<div class="credits-blank"></div>
+</div>
+<div class="license">
+<div class="title"><span class="title">License</span></div>
+<div class="contents"><p class="p">This work is licensed under the
+      <span class="link"><a href="http://www.gnu.org/licenses/gpl.html" title="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</a></span>.</p></div>
+</div>
+</div></div>
+</div></footer></div></footer>
+</div></main></body>
+</html>

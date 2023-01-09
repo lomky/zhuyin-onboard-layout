@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Supported tags and attributes</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="Onboard Help">Onboard Help</a> › <a class="trail" href="index.html#advanced" title="Advanced Configuration">Advanced Configuration</a> » <a class="trail" href="layouts-index.html" title="Layout creation and customisation">Layout creation and customisation</a> › <a class="trail" href="layouts-index.html#topics" title="Topics">Topics</a> » </div></div></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">Supported tags and attributes</span></h1></div>
+<div class="region">
+<div class="contents pagewide"><div class="note note-warning" title="Warning">
+<svg height="24" width="24" version="1.1">
+ <path class="yelp-svg-fill" d="m11.92 3.3047a1.3872 1.3872 0 0 0 -1.129 0.6933l-8.6055 14.922a1.3872 1.3872 0 0 0 1.2012 2.08l17.226-0.008a1.3872 1.3872 0 0 0 1.201 -2.08l-8.619-14.916a1.3872 1.3872 0 0 0 -1.136 -0.6913 1.3872 1.3872 0 0 0 -0.139 0zm0.08 4.6953a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1 1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1zm0 9a1 1 0 0 1 1 1 1 1 0 0 1 -1 1 1 1 0 0 1 -1 -1 1 1 0 0 1 1 -1z"></path>
+</svg><div class="inner"><div class="region"><div class="contents"><p class="p">The following specification is outdated and incomplete. It is nevertheless available here, as it might be helpful when working with layouts.</p></div></div></div>
+</div></div>
+<section id="layouts-specification"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Layout specification</span></h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="p">The following section assumes a basic knowledge about markup languages by the reader. Moreover, I am only going to talk about the main points of the layout specification; you are encouraged to open the layouts shipping with <span class="app">Onboard</span> in order to learn about more details.</p>
+<p class="p">A layout consists of one <span class="file">xml</span> file with the <span class="code">.onboard</span> extension and one <span class="file">svg</span> file per pane defined in the <span class="file">.onboard</span> file.</p>
+<p class="p">The <span class="file">.onboard</span> file specifies what key are on each pane, their properties such as label and action; it does not specify size and the location of each key. These are defined in the <span class="file">svg</span> file corresponding to the pane. The connection between the keys in the <span class="file">.onboard</span> file and in the <span class="file">svg</span> files is made by the ids of the keys: the key in the <span class="file">svg</span> file that has the same id of a key in the <span class="file">.onboard</span> file determines the size and position of the key on the pane.</p>
+<p class="p">You can use the application named <span class="app">Inkscape</span> to create or modify the <span class="file">svg</span> files corresponding to the panes. The keys can be rectangles or paths (straight lines or bezier curves) though <span class="app">Onboard</span> only detects clicks quite approximately around curves. Do not forget to set the id of the keys in <span class="app">Inkscape</span> by right clicking on the object and selecting object properties.</p>
+<p class="p">Each &lt;pane&gt; tag in the <span class="file">.onboard</span> file <span class="em">has</span>:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p"><span class="code">id = "name"</span>: the id of the pane</p></li>
+<li class="list"><p class="p"><span class="code">filename = "name"</span>: the name of the corresponding svg file</p></li>
+</ul></div></div></div>
+<p class="p">Each &lt;key&gt; tag in the <span class="file">.onboard</span> file <span class="em">has</span>:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p"><span class="code">id = "name"</span>: the id of the key</p></li>
+<li class="list"><p class="p"><span class="code">sticky = "true/false"</span>: whether the key is a latching and locking key; please see <span class="link"><a href="key-behaviours.html" title="Key behaviours">Key behaviours</a></span></p></li>
+<li class="list"><p class="p"><span class="code">label = "name"</span>: the default label on the key</p></li>
+</ul></div></div></div>
+<p class="p">Each &lt;key&gt; tag in the <span class="file">.onboard</span> file <span class="em">can also have</span>:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p"><span class="code">cap_label = "name"</span>: the label for when caps lock or shift is pressed</p></li>
+<li class="list"><p class="p"><span class="code">shift_label = "name"</span>: the label for when only shift is pressed</p></li>
+<li class="list"><p class="p"><span class="code">altgr_label = "name"</span>: the label for when alt gr is pressed</p></li>
+<li class="list"><p class="p"><span class="code">altgrNshift_label = "name"</span>: the label for when alt gr and shift is pressed</p></li>
+<li class="list"><p class="p"><span class="code">font_offset_x = "number between 0 and 1"</span>: the x offset of the label in the key</p></li>
+<li class="list"><p class="p"><span class="code">font_offset_y = "number between 0 and 1"</span>: the y offset of the label in the key</p></li>
+</ul></div></div></div>
+<p class="p">Each &lt;key&gt; tag in the <span class="file">.onboard</span> file <span class="em">must have exactly one of</span>:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p"><span class="code">char = "character"</span>: the character written when key pressed</p></li>
+<li class="list"><p class="p"><span class="code">keysym = "number"</span>: the keysym or the physical key being emulated in decimal or hex prefixed by 0x</p></li>
+<li class="list"><p class="p"><span class="code">modifier = "name"</span>: the name of the modifier which key emulates. It is recommended to have the sticky attribute set to true for modifiers. List of modifier names given below.</p></li>
+<li class="list"><p class="p"><span class="code">keypress = "name"</span>: name of emulated keys. List of press names given below.</p></li>
+<li class="list"><p class="p"><span class="code">macro = "number"</span>: the macro aka snippet number starting from 0 that the key corresponds with</p></li>
+<li class="list"><p class="p"><span class="code">script = "name"</span>: he name of the script which is run when key is pressed</p></li>
+</ul></div></div></div>
+<p class="p">List of <span class="em">modifier names</span> that can be paired with the modifier attribute of key:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p"><span class="code">shift</span></p></li>
+<li class="list"><p class="p"><span class="code">caps</span></p></li>
+<li class="list"><p class="p"><span class="code">control</span></p></li>
+<li class="list"><p class="p"><span class="code">mod1</span> aka alt</p></li>
+<li class="list"><p class="p"><span class="code">mod2</span></p></li>
+<li class="list"><p class="p"><span class="code">mod3</span> aka num lock</p></li>
+<li class="list"><p class="p"><span class="code">mod4</span></p></li>
+<li class="list"><p class="p"><span class="code">mod5</span> aka alt gr</p></li>
+</ul></div></div></div>
+<p class="p">List of <span class="em">keypress names</span> that can be paired with the keypress attribute of key:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p"><span class="code">space</span></p></li>
+<li class="list"><p class="p"><span class="code">insert</span></p></li>
+<li class="list"><p class="p"><span class="code">home</span></p></li>
+<li class="list"><p class="p"><span class="code">page_up</span></p></li>
+<li class="list"><p class="p"><span class="code">page_down</span></p></li>
+<li class="list"><p class="p"><span class="code">end</span></p></li>
+<li class="list"><p class="p"><span class="code">delete</span></p></li>
+<li class="list"><p class="p"><span class="code">return</span></p></li>
+<li class="list"><p class="p"><span class="code">backspace</span></p></li>
+</ul></div></div></div>
+<p class="p">List of <span class="em">group names</span> that can be paired with the group attribute of key:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p"><span class="code">alphanumeric</span></p></li>
+<li class="list"><p class="p"><span class="code">bottomrow</span></p></li>
+<li class="list"><p class="p"><span class="code">backspace</span></p></li>
+<li class="list"><p class="p"><span class="code">misc</span></p></li>
+<li class="list"><p class="p"><span class="code">shifts</span></p></li>
+<li class="list"><p class="p"><span class="code">keypadmisc</span></p></li>
+<li class="list"><p class="p"><span class="code">keypadnumber</span></p></li>
+<li class="list"><p class="p"><span class="code">keypadoperators</span></p></li>
+<li class="list"><p class="p"><span class="code">directions</span></p></li>
+<li class="list"><p class="p"><span class="code">editing</span></p></li>
+<li class="list"><p class="p"><span class="code">snippets</span></p></li>
+<li class="list"><p class="p"><span class="code">mousebutton</span></p></li>
+<li class="list"><p class="p"><span class="code">scripts</span></p></li>
+<li class="list"><p class="p"><span class="code">fkeys</span></p></li>
+</ul></div></div></div>
+</div></div>
+</div></section><section class="links" role="navigation"><div class="inner">
+<div class="hgroup pagewide"></div>
+<div class="contents pagewide">
+<div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="layouts-index.html#topics" title="Topics">Topics</a></li></ul></div>
+</div></div>
+<div class="links seealsolinks"><div class="inner">
+<div class="title"><h2><span class="title">See Also</span></h2></div>
+<div class="region"><ul>
+<li class="links ">
+<a href="layouts-create-copy.html" title="Copy current layout">Copy current layout</a><span class="desc"> — Create a copy of the current layout.</span>
+</li>
+<li class="links ">
+<a href="layouts-replace-character.html" title="Replace character of key">Replace character of key</a><span class="desc"> — Replace the character typed by a key of the layout.</span>
+</li>
+</ul></div>
+</div></div>
+</div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"><footer class="about ui-expander" role="contentinfo"><div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li>Francesco Fumanti</li></ul>
+</div>
+<div class="credits-blank"></div>
+<div class="credits-blank"></div>
+</div>
+<div class="license">
+<div class="title"><span class="title">License</span></div>
+<div class="contents"><p class="p">This work is licensed under the
+      <span class="link"><a href="http://www.gnu.org/licenses/gpl.html" title="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</a></span>.</p></div>
+</div>
+</div></div>
+</div></footer></div></footer>
+</div></main></body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Key behaviours</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="Onboard Help">Onboard Help</a> › <a class="trail" href="index.html#usage" title="Using Onboard">Using <span class="app">Onboard</span></a> » </div></div></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">Key behaviours</span></h1></div>
+<div class="region">
+<div class="contents pagewide">
+<p class="p">The keys on the layers of <span class="app">Onboard</span> do not all behave the same way. How each key behaves depends on its definition in the keyboard layout file.</p>
+<p class="p">We distinguish the following behaviours:</p>
+<div class="terms"><div class="inner"><div class="region"><dl class="terms">
+<dt class="terms">Immediate keys</dt>
+<dd class="terms">
+<p class="p">Typical examples of such keys on the <span class="em">Compact Onboard</span> layout are the keys with letters.</p>
+<p class="p">A <span class="key"><kbd>left mouse button click</kbd></span> on such a key sends the corresponding letter to the system on <span class="key"><kbd>mouse button release</kbd></span>. This way, if the <span class="key"><kbd>left mouse button down</kbd></span> happened on a wrong <span class="gui">key</span>, the user has the possibility to slide to the correct <span class="gui">key</span> before he releases the <span class="key"><kbd>mouse button</kbd></span>.</p>
+<p class="p">A <span class="key"><kbd>left mouse button down and hold</kbd></span> on most keys without moving the mouse either repeats the clicked character until released or opens a <span class="gui">popup</span> where the user can choose an alternative. Most of the time, the alternative is the clicked letter with a diacritical mark. The behaviour of the <span class="key"><kbd>left mouse button down and hold</kbd></span> depends on a setting in <span class="gui">Preferences of Onboard</span>; by default <span class="app">Onboard</span> is configured to show the popup.</p>
+</dd>
+<dt class="terms">Locking keys</dt>
+<dd class="terms">
+<p class="p">On the <span class="em">Compact Onboard</span> layout, the <span class="key"><kbd>Caps Lock</kbd></span> modifier is a locking key.</p>
+<p class="p">A click with the <span class="key"><kbd>left mouse button</kbd></span> on the key activates it. The <span class="key"><kbd>Caps Lock</kbd></span> modifier remains locked in its active state until the user clicks a second time with the <span class="key"><kbd>left mouse button</kbd></span> on it.</p>
+</dd>
+<dt class="terms">Latching and locking keys</dt>
+<dd class="terms">
+<p class="p">Examples of such keys are  most <span class="key"><kbd>modifier</kbd></span> keys or the <span class="key"><kbd>layer buttons</kbd></span> to switch the layout to a different layer.</p>
+<p class="p">By default, a <span class="key"><kbd>left mouse button</kbd></span> click on such a key latches the key. This means that the key remains active until another <span class="key"><kbd>left mouse button</kbd></span> click occurs elsewhere. If for example the user clicks on the <span class="key"><kbd>Shift</kbd></span> modifier, it remains active until he clicks for example on a <span class="key"><kbd>letter</kbd></span> key.</p>
+<p class="p">However, if the user clicks another time on the <span class="key"><kbd>modifier</kbd></span> that has just been latched, the <span class="key"><kbd>modifier</kbd></span> gets locked: the <span class="key"><kbd>modifier</kbd></span> remains active regardless of where the user clicks. To release the <span class="key"><kbd>modifier</kbd></span> the user has to click another time on it. For example, if the user clicks two consecutive times on the <span class="key"><kbd>Shift</kbd></span> modifier, the <span class="key"><kbd>Shift</kbd></span> modifier gets locked. This is among others useful when typing a word with only capital letters in order to not having to reactivate the <span class="key"><kbd>Shift</kbd></span> modifier after typing each letter. Once he is done with writing the word in capital letters, he can click on the <span class="key"><kbd>Shift</kbd></span>  modifier to release it.</p>
+<p class="p">The default behaviour of the <span class="key"><kbd>modifiers</kbd></span> on consecutive <span class="key"><kbd>left mouse button</kbd></span> clicks is to cycle through the states of latched, locked and inactive as described above. However, this behaviour can be changed in the <span class="gui">Preferences of Onboard</span>. It is for example possible to set the <span class="key"><kbd>modifiers</kbd></span> to lock on a double click instead of cycling.</p>
+</dd>
+</dl></div></div></div>
+</div>
+<section class="links" role="navigation"><div class="inner">
+<div class="hgroup pagewide"></div>
+<div class="contents pagewide">
+<div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="index.html#usage" title="Using Onboard">Using <span class="app">Onboard</span></a></li></ul></div>
+</div></div>
+<div class="links seealsolinks"><div class="inner">
+<div class="title"><h2><span class="title">See Also</span></h2></div>
+<div class="region"><ul>
+<li class="links ">
+<a href="switch-click-type.html" title="Switch click type">Switch click type</a><span class="desc"> — Perform a middle or right click with the left mouse button.</span>
+</li>
+<li class="links ">
+<a href="switch-layer.html" title="Switch layer">Switch layer</a><span class="desc"> — Switch to a different pane of the layout in use.</span>
+</li>
+<li class="links ">
+<a href="snippet-usage.html" title="Use a snippet">Use a snippet</a><span class="desc"> — Have the content of a snippet automatically typed.</span>
+</li>
+<li class="links ">
+<a href="hover-click.html" title="Use the hover click">Use the hover click</a><span class="desc"> — Perform clicks without any hardware button.</span>
+</li>
+</ul></div>
+</div></div>
+</div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"><footer class="about ui-expander" role="contentinfo"><div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li>Francesco Fumanti</li></ul>
+</div>
+<div class="credits-blank"></div>
+<div class="credits-blank"></div>
+</div>
+<div class="license">
+<div class="title"><span class="title">License</span></div>
+<div class="contents"><p class="p">This work is licensed under the
+      <span class="link"><a href="http://www.gnu.org/licenses/gpl.html" title="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</a></span>.</p></div>
+</div>
+</div></div>
+</div></footer></div></footer>
+</div></main></body>
+</html>

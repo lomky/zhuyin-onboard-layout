@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<!--
+Copyright © 2012-2015 marmuta <marmvta@gmail.com>This file is part of Onboard.
+Onboard is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+Onboard is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<keyboard id="zhuyin" format="3.2" section="system" summary="Grid of keys, suitable for keyboard scanning">
+  <include file="key_defs.xml"/>
+  <box border="0.5" spacing="1.5" orientation="vertical">
+    <!--- word suggestions -->
+    <panel filename="zhuyin-Alpha.svg">
+      <include file="word_suggestions.xml"/></panel>
+    <box spacing="1.5">
+      <panel layer="alpha" filename="zhuyin-Alpha.svg">
+        <key group="alphanumeric" id="1" char="ㄚ" label="ㄚ" keycode="10"/>
+        <key group="alphanumeric" id="2" char="ㄛ" label="ㄛ" keycode="11"/>
+        <key group="alphanumeric" id="3" char="ㄜ" label="ㄜ" keycode="12"/>
+        <key group="alphanumeric" id="4" char="ㄝ" label="ㄝ" keycode="13"/>
+        <key group="alphanumeric" id="5" char="ㄦ" label="ㄦ" keycode="14"/>
+        <key group="alphanumeric" id="6" char="ㄞ" label="ㄞ" keycode="15"/>
+        <key group="alphanumeric" id="66" char="ㄢ" label="ㄢ" keycode="15"/>
+        <key group="alphanumeric" id="7" char="ㄟ" label="ㄟ" keycode="16"/>
+        <key group="alphanumeric" id="77" char="ㄣ" label="ㄣ" keycode="15"/>
+        <key group="alphanumeric" id="8" char="ㄠ" label="ㄠ" keycode="17"/>
+        <key group="alphanumeric" id="88" char="ㄤ" label="ㄤ" keycode="15"/>
+        <key group="alphanumeric" id="9" char="ㄡ" label="ㄡ" keycode="18"/>
+        <key group="alphanumeric" id="99" char="ㄥ" label="ㄥ" keycode="15"/>
+        <key group="alphanumeric" id="e" char="ㄅ" label="ㄅ" keycode="26"/>
+        <key group="alphanumeric" id="r" char="ㄇ" label="ㄇ" keycode="27"/>
+        <key group="alphanumeric" id="t" char="ㄉ" label="ㄉ" keycode="28"/>
+        <key group="alphanumeric" id="y" char="ㄧ" label="ㄧ" keycode="29"/>
+        <key group="alphanumeric" id="u" char="ㄓ" label="ㄓ" keycode="30"/>
+        <key group="alphanumeric" id="i" char="ㄆ" label="ㄆ" keycode="31"/>
+        <key group="alphanumeric" id="o" char="ˋ" label="ˋ" keycode="32"/>
+        <key group="alphanumeric" id="p" char="ㄒ" label="ㄒ" keycode="33"/>
+        <key group="alphanumeric" id="s" char="ㄍ" label="ㄍ" keycode="39"/>
+        <key group="alphanumeric" id="d" char="ㄋ" label="ㄋ" keycode="40"/>
+        <key group="alphanumeric" id="f" char="ㄔ" label="ㄔ" keycode="41"/>
+        <key group="alphanumeric" id="g" char="ㄏ" label="ㄏ" keycode="42"/>
+        <key group="alphanumeric" id="h" char="ㄗ" label="ㄗ" keycode="43"/>
+        <key group="alphanumeric" id="j" char="ㄈ" label="ㄈ" keycode="44"/>
+        <key group="alphanumeric" id="k" char="ㄌ" label="ㄌ" keycode="45"/>
+        <key group="alphanumeric" id="l" char="ㄎ" label="ㄎ" keycode="46"/>
+        <key group="alphanumeric" id="x" char="ㄕ" label="ㄕ" keycode="53"/>
+        <key group="alphanumeric" id="c" char="ㄑ" label="ㄑ" keycode="54"/>
+        <key group="alphanumeric" id="v" char="ㄖ" label="ㄖ" keycode="55"/>
+        <key group="alphanumeric" id="b" char="˙" label="˙" keycode="56"/>
+        <key group="alphanumeric" id="n" char="ㄊ" label="ㄊ" keycode="57"/>
+        <key group="alphanumeric" id="comma" char="ㄩ" label="ㄩ" keycode="59"/>
+        <key group="alphanumeric" id="open" char="。" label="。" />
+        <panel id="variable_keys" layout="be,fr,cm(azerty)">
+          <key group="alphanumeric" id="q" char="ㄘ" label="ㄘ" keycode="38"/>
+          <key group="alphanumeric" id="a" char="ˇ" label="ˇ" keycode="24"/>
+          <key group="alphanumeric" id="m" char="ˊ" label="ˊ" keycode="47"/>
+          <key group="alphanumeric" id="w" char="ㄐ" label="ㄐ" keycode="52"/>
+          <key group="alphanumeric" id="z" char="ㄨ" label="ㄨ" keycode="25"/>
+          <key group="alphanumeric" id="full-stop" char="ㄙ" label="ㄙ" keycode="58"/>
+        </panel>
+        <panel id="variable_keys">
+          <key group="alphanumeric" id="q" char="ㄘ" label="ㄘ" keycode="24"/>
+          <key group="alphanumeric" id="a" char="ˇ" label="ˇ" keycode="38"/>
+          <key group="alphanumeric" id="m" char="ˊ" label="ˊ" keycode="58"/>
+          <key group="alphanumeric" id="w" char="ㄐ" label="ㄐ" keycode="25"/>
+          <key group="alphanumeric" id="z" char="ㄨ" label="ㄨ" keycode="52"/>
+          <key group="alphanumeric" id="full-stop" char="ㄙ" label="ㄙ" keycode="60"/>
+        </panel>
+        <key group="bottomrow" id="SPCE.grid" label="Space"/>
+        <key group="bottomrow" id="BKSP.grid"/>
+        <key group="bottomrow" id="RTRN.grid" label="⏎" label_x_align="0.5" popup_id="RTRN_popup"/>
+      </panel>
+      <!-- Panel with the click buttons -->
+      <panel filename="zhuyin-Alpha.svg" id="click">
+        <key group="click" id="middleclick"/>
+        <key group="click" id="secondaryclick"/>
+        <key group="click" id="doubleclick"/>
+        <key group="click" id="dragclick"/>
+        <key group="click" id="hoverclick"/>
+      </panel>
+    </box>
+  </box>
+  <!-- popup definition -->
+  <layout id="RTRN_popup" filename="zhuyin-Alpha.svg">
+    <box compact="true">
+      <key group="bottomrow" id="quit"/>
+      <key id="settings"/>
+      <key id="move"/>
+      <key id="showclick"/>
+      <key id="hide" svg_id="hide.popup" image="close.svg" group="nowordlist"/>
+    </box>
+  </layout>
+</keyboard>

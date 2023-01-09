@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Theme creation and customisation</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="highlight.pack.js"></script><script>
+document.addEventListener('DOMContentLoaded', function() {
+  var matches = document.querySelectorAll('code.syntax')
+  for (var i = 0; i < matches.length; i++) {
+    hljs.highlightBlock(matches[i]);
+  }
+}, false);</script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><main><div class="page">
+<header><div class="inner pagewide"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="Onboard Help">Onboard Help</a> › <a class="trail" href="index.html#advanced" title="Advanced Configuration">Advanced Configuration</a> » </div></div></div></header><article><div class="hgroup pagewide"><h1 class="title"><span class="title">Theme creation and customisation</span></h1></div>
+<div class="region">
+<div class="contents pagewide"></div>
+<section id="theme-intro"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Introduction</span></h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="p">The look of a layout in <span class="app">Onboard</span> is specified through themes. They specify among others the colors used by the onscreen keyboard, whether the keys are flat or have a gradient, whether the keys should have rounded corners, etc. The themes however, do not specify size and position of the keys; these are specified in the <span class="file">layout</span> files. You can learn more about layouts in the <span class="link"><a href="layouts-index.html" title="Layout creation and customisation">Layout creation and customisation</a></span> page.</p>
+<p class="p">A theme consists of two xml files:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p">The xml file with <span class="file">.theme</span> as extension contains information among others about key style, key stroke, label overrides, what font to use and a reference to the xml file with the color information. </p></li>
+<li class="list"><p class="p">The xml file with <span class="file">.colors</span> as extension contains the information about what colors to use for the different keys.</p></li>
+</ul></div></div></div>
+<p class="p">In the two following sections, you can find brief descriptions of the structure of both both files.</p>
+<p class="p">If you want to use custom themes with <span class="app">Onboard</span>, simply put them into the <span class="file">themes</span> directory in the <span class="file">.onboard</span> of your home folder and <span class="app">Onboard</span> will automatically pick them up.</p>
+</div></div>
+</div></section><section id="theme-theme"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Structure of the a <span class="file">.theme</span> file</span></h2></div>
+<div class="region"><div class="contents pagewide"><p class="p">The xml structure of the a <span class="file">.theme</span> file is quite simple and should not need any explanation to get understood as the tags used in the file are quite descriptive. I invite you to have a look at the <span class="file">Ambiance.theme</span> file shipping with Onboard: it contains all the tags to use in a <span class="file">.theme</span> xml file.</p></div></div>
+</div></section><section id="theme-colors"><div class="inner">
+<div class="hgroup pagewide"><h2 class="title"><span class="title">Structure of the a <span class="file">.colors</span> file</span></h2></div>
+<div class="region"><div class="contents pagewide">
+<p class="p">The xml structure of the a <span class="file">.colors</span> file is quite straightforward:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p">There are &lt;pane&gt; tags defining color and opacity of the different panes.</p></li>
+<li class="list"><p class="p">There are &lt;key_group&gt; tags that define also defining various color properties for the keys that are member of the &lt;key_group&gt;. To add a key to a &lt;key_group&gt;, simply add it between the opening and closing tags of the &lt;key_group&gt;. If a key is listed in more than one &lt;key_group&gt;, it will get the colors of the last &lt;key_group&gt; that has the key in its key list.</p></li>
+</ul></div></div></div>
+<p class="p">I invite you to have a look at the <span class="file">Aubergine.colors</span> file shipping with Onboard as a sample of a <span class="file">.colors</span> xml file.</p>
+</div></div>
+</div></section><section class="links" role="navigation"><div class="inner">
+<div class="hgroup pagewide"></div>
+<div class="contents pagewide">
+<div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="index.html#advanced" title="Advanced Configuration">Advanced Configuration</a></li></ul></div>
+</div></div>
+<div class="links seealsolinks"><div class="inner">
+<div class="title"><h2><span class="title">See Also</span></h2></div>
+<div class="region"><ul>
+<li class="links ">
+<a href="layouts-index.html" title="Layout creation and customisation">Layout creation and customisation</a><span class="desc"> — Index page for the pages about layout creation and layout customisation.</span>
+</li>
+<li class="links ">
+<a href="custom-defaults.html" title="Onboard custom system defaults">Onboard custom system defaults</a><span class="desc"> — Set custom system defaults that are used by Onboard the first time it is launched.</span>
+</li>
+</ul></div>
+</div></div>
+</div>
+</div></section>
+</div>
+<div class="clear"></div></article><footer><div class="inner pagewide"><footer class="about ui-expander" role="contentinfo"><div class="yelp-data yelp-data-ui-expander" data-yelp-expanded="false"></div>
+<div class="inner">
+<div class="hgroup"><h2><span class="title">About</span></h2></div>
+<div class="region"><div class="contents">
+<div class="credits">
+<div class="credits-authors">
+<div class="title"><span class="title">Written By</span></div>
+<ul class="credits"><li>Francesco Fumanti</li></ul>
+</div>
+<div class="credits-blank"></div>
+<div class="credits-blank"></div>
+</div>
+<div class="license">
+<div class="title"><span class="title">License</span></div>
+<div class="contents"><p class="p">This work is licensed under the
+      <span class="link"><a href="http://www.gnu.org/licenses/gpl.html" title="http://www.gnu.org/licenses/gpl.html">GNU General Public License version 3 or any later version</a></span>.</p></div>
+</div>
+</div></div>
+</div></footer></div></footer>
+</div></main></body>
+</html>
