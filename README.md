@@ -3,9 +3,7 @@
 
 A zhuyin keyboard for [Onboard](https://launchpad.net/onboard), the virtual on screen keyboard for linux.
 
-I have found Onboard to be the best onscreen keyboard for use in
-combination with [i3wm](https://i3wm.org/), and needed access to the [Zhuyin Fuhao](https://simple.wikipedia.org/wiki/Zhuyin)
-to assist with learning Taiwanese Mandarin & Traditional Chinese characters.
+I have found Onboard to be the best onscreen keyboard for use in combination with [i3wm](https://i3wm.org/), and needed access to the [Zhuyin Fuhao](https://simple.wikipedia.org/wiki/Zhuyin) to assist with learning Taiwanese Mandarin & Traditional Chinese characters.
 
 I have not created number or punctuation layers, but would welcome that contribution.
 
@@ -15,11 +13,10 @@ This repo was only possible because of the repo created by @EricGebhart [onboard
 
 Requires [Onboard](https://launchpad.net/onboard), available through your package manager.
 
-- clone this repo, 
-- `cp zhuyin* ~/.local/share/onboard/layouts/`
+- clone this repo,
+- `ln -s /path/to/repo/zhuyin.onboard ~/.local/share/onboard/layouts/`
+- `ln -s /path/to/repo/zhuyin-Alpha.svg ~/.local/share/onboard/layouts/`
 - `onboard -l zhuyin`
-
-Where you can then edit, tweak and change them all you want.
 
 ## Editing, or creating your own layouts
 
@@ -43,6 +40,4 @@ Where you can then edit, tweak and change them all you want.
 
 ## Onboard documentation
 
-These is an HTML version of the Onboard documentation in the doc directory of this repo 
-
-Point your browser at the repository's `/doc/index.html` file to browse it.
+There is an HTML version of the Onboard documentation in the doc directory of this repo. Point your browser at the repository's `/doc/index.html` file to browse it.
